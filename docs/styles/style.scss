@@ -49,7 +49,7 @@ html {
     }
 }
 #bookList {
-    margin: 5%;
+    margin: 2.5%;
     border: 1px solid black;
     box-shadow: 0 0 5px white;
     background: $light-gray;
@@ -58,7 +58,7 @@ html {
         height: 5vh;
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
 
         .head-cell {
             background: black;
@@ -73,6 +73,93 @@ html {
     }
 
     #bookList--books {
-        
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(1fr, auto));
+
+        .book {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(auto, 1fr));
+            padding: 5px 0;
+
+            .book-cell {
+                text-align: center;
+                font-size: 1.2rem;
+                border-bottom: 1px solid black;
+            }
+
+            .icon-btn {
+                border: none;
+                border-bottom: 1px solid black;
+                background: inherit;
+            }
+
+            .toggle-btn {
+                border: none;
+                border-bottom: 1px solid black;
+                background: inherit;
+                background: $dark-gray;
+                color: white;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+        }
     }
+}
+#modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+
+    #close-modal {
+        float: right;
+    }
+
+    #modal-content {
+        margin: 25% auto;
+        width: 80%;
+        border: 1px solid black;
+        background: white;
+        padding: 50px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        #newBookForm {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+
+            .form-group {
+                label {
+                    font-size: 1.4rem;
+                }
+                input {
+                    font-size: 1.4rem;
+                }
+                input:focus {
+                    box-shadow: 0 0 5px $light;
+                }
+
+            }
+
+            .submit-btn {
+                font-weight: bold;
+                border: none;
+                border-radius: 5%;
+                background: $light;
+            }
+        }
+    }
+}
+
+
+.hide {
+    display: none;
 }
