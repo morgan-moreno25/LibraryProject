@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7c99fed97a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <script defer src="index.js"></script>
     <title>Library</title>
 </head>
 <body>
     <div id="app">
+        <div id="modal" class="hide">
+            <div id="modal-content">
+                <i id="close-modal" class="fas fa-times fa-2x"></i>
+                <h2>Enter Book Information</h2>
+                <form id="newBookForm">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author" />
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating (Out of 5):</label>
+                        <input type="text" id="rating" name="rating" />
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">Pages:</label>
+                        <input type="number" id="pages" name="pages" />
+                    </div>
+                    <button type="button" class="submit-btn" id="submitBookBtn">Submit</button>
+                </form>
+            </div>
+        </div>
         <div id="header">
             <h1>Library</h1>
         </div>
@@ -20,6 +46,7 @@
                 <div class="head-cell">Title</div>
                 <div class="head-cell">Author</div>
                 <div class="head-cell">Rating</div>
+                <div class="head-cell">Pages</div>
                 <div class="head-cell">Is Read?</div>
                 <div class="head-cell">Remove</div>
             </div>
