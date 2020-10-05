@@ -4,7 +4,8 @@
   "description": "Application that simulates a library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-styles": "npx sass --watch docs/styles/style.scss docs/styles/style.css"
   },
   "author": "Morgan Moreno",
   "license": "ISC",

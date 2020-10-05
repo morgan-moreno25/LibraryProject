@@ -1,3 +1,66 @@
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 10px;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 10vh 5vh minmax(85vh, auto);
+  grid-template-areas: "header" "newBook" "books";
+  background: #403f3e;
+}
+
+#header {
+  grid-area: "header";
+  background: #420501;
+  color: white;
+  text-align: center;
+}
+#header h1 {
+  font-size: 3rem;
+  vertical-align: middle;
+  line-height: 10vh;
+}
+
+#addBook {
+  grid-area: newBook;
+  background: #ff8780;
+}
+#addBook #newBookBtn {
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#bookList {
+  margin: 5%;
+  border: 1px solid black;
+  box-shadow: 0 0 5px white;
+  background: #d9d7d4;
+}
+#bookList #bookList--heading {
+  height: 5vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+}
+#bookList #bookList--heading .head-cell {
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  line-height: 5vh;
+  text-decoration: underline;
+  border-bottom: 1px solid white;
+}
 
 /*# sourceMappingURL=style.css.map */
