@@ -36,3 +36,8 @@ From completing this project I gained experience with the following:
     - Modals
     - Object Prototypes
     - FontAwesome Icons
+
+---
+## LIVE
+
+You can check out a live demo of this project [here](https://morgan-moreno25.github.io/LibraryProject)
