@@ -1,28 +1,48 @@
 #app {
-  display: grid;
-  grid-template-rows: 10vh 80vh 10vh;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
+	display: grid;
+	grid-template-rows: 10vh 80vh 10vh;
+	grid-template-areas:
+		'header'
+		'content'
+		'footer';
 }
 
 #header {
-  grid-area: header;
-  justify-content: center;
-  align-content: center;
-  color: white;
+	grid-area: header;
+	justify-content: center;
+	align-content: center;
+	color: white;
 }
 
 #content {
-  grid-area: content;
+	grid-area: content;
+}
+
+#books {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.card-body {
+	text-align: center;
+}
+.card-footer {
+	text-align: center;
+}
+
+@media (max-width: 1000px) {
+	#books {
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
 }
 
 #footer {
-  grid-area: footer;
-  background: var(--dark);
+	grid-area: footer;
+	background: var(--dark);
 }
 
 #footer-links > a {
-  flex: 0 0 5%;
+	flex: 0 0 5%;
 }
