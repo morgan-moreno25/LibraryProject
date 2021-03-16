@@ -6,12 +6,12 @@ import "./App.css";
 import { Navbar } from "react-bootstrap";
 import { Code, GitHub, Linkedin } from "react-feather";
 
+import Header from "./components/layout/Header";
+
 export default function App() {
   return (
     <div id="app">
-      <Navbar bg="primary" variant="dark" id="header">
-        <h1 className="font-weight-bold">Library</h1>
-      </Navbar>
+      <Header />
       <main id="content" className="container"></main>
       <footer id="footer" className="container-fluid">
         <div
